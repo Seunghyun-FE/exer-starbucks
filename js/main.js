@@ -32,3 +32,11 @@ window.addEventListener(
 //scrollY window에서 자체적으로 제공하는 기능
 // _.throttle(함수, 시간)
 //gsap.to(요소, 지속시간, 옵션)
+
+const fadeEls = document.querySelectorAll(".visual .fade-in");
+fadeEls.forEach(function (fadeEl, index) {
+  gsap.to(fadeEl, 1, {
+    delay: (index + 1) * 0.7,
+    opacity: 1,
+  });
+});
