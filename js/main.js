@@ -17,6 +17,7 @@ searchInputEl.addEventListener("blur", function () {
 });
 
 const badgeEl = document.querySelector("header .badges");
+const toTopEl = document.querySelector("#to-top");
 
 window.addEventListener(
   "scroll",
@@ -24,14 +25,21 @@ window.addEventListener(
     console.log(window.scrollY);
     if (window.scrollY > 500) {
       gsap.to(badgeEl, 0.6, { opacity: 0, display: "none" });
+      gsap.to(toTopEl, 0.2, { x: 0 });
     } else {
       gsap.to(badgeEl, 0.6, { opacity: 1, display: "block" });
+      gsap.to(toTopEl, 0.2, { x: 100 });
     }
   }, 300)
 );
 //scrollY window에서 자체적으로 제공하는 기능
 // _.throttle(함수, 시간)
 //gsap.to(요소, 지속시간, 옵션)
+toTopEl.addEventListener("click", function () {
+  gsap.to(window, 0.7, {
+    scrollTo: 0,
+  });
+});
 
 const fadeEls = document.querySelectorAll(".visual .fade-in");
 fadeEls.forEach(function (fadeEl, index) {
