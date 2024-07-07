@@ -123,3 +123,7 @@ spyEls.forEach(function (spyEl) {
     .setClassToggle(spyEl, "show")
     .addTo(new ScrollMagic.Controller());
 });
+
+const thisyear = document.querySelector(".this-year");
+thisyear.textContent = new Date().getFullYear();
+//textContent : 값을 알아가거나 지정할 때 사용
