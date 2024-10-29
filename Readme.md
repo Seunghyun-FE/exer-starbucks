@@ -5,7 +5,7 @@
     ![기능 예시](./images/Animation4.gif)
    <br/>
    <br/>
-2. 배포url : [URL](https://main--starbucks-css.netlify.app/)
+2. 배포url : [URL](https://jolly-vacherin-3c9b90.netlify.app/)
    <br/>
    <br/>
 3. 사용한 라이브러리와 구현한 기능들
